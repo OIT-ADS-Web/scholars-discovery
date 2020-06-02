@@ -10,4 +10,4 @@ CONSTRUCT {
     ?position vivo:relates ?organization .
     ?organization a foaf:Organization .
     ?organization rdfs:label ?label .
-} 
+}
