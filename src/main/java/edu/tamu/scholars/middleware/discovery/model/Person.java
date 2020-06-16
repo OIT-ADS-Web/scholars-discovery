@@ -27,6 +27,10 @@ public class Person extends Common {
     private String name;
 
     @Indexed(type = "whole_string")
+    @PropertySource(template = "person/name", predicate = "http://www.w3.org/2000/01/rdf-schema#label")
+    private String nameSort;
+
+    @Indexed(type = "whole_string")
     @PropertySource(template = "person/primaryEmail", predicate = "http://www.w3.org/2006/vcard/ns#email")
     private String primaryEmail;
 
@@ -630,6 +634,14 @@ public class Person extends Common {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setNameSort(String nameSort) {
+        this.nameSort = nameSort;
+    }
+
+    public String getNameSort() {
+        return nameSort;
     }
 
     public String getPrimaryEmail() {

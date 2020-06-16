@@ -125,6 +125,8 @@ public class Person extends AbstractNestedDocument {
 
   private String name;
 
+  private String nameSort;
+
   private String primaryEmail;
 
   private List<String> additionalEmails;
@@ -485,6 +487,14 @@ public class Person extends AbstractNestedDocument {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getNameSort() {
+    return nameSort;
+  }
+
+  public void setNameSort(String nameSort) {
+    this.nameSort = nameSort;
   }
 
   public String getPrimaryEmail() {
